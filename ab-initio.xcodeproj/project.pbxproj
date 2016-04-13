@@ -15,6 +15,7 @@
 		426E5D901CBE711E00340FFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426E5D8E1CBE711E00340FFC /* LaunchScreen.storyboard */; };
 		426E5D9E1CBE985600340FFC /* MemoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426E5D9D1CBE985600340FFC /* MemoryCell.swift */; };
 		42B786811CBEE0A000726097 /* SingleMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B786801CBEE0A000726097 /* SingleMemoryViewController.swift */; };
+		42B786831CBEEBD300726097 /* AddNewMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B786821CBEEBD300726097 /* AddNewMemoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		426E5D911CBE711E00340FFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		426E5D9D1CBE985600340FFC /* MemoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCell.swift; sourceTree = "<group>"; };
 		42B786801CBEE0A000726097 /* SingleMemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleMemoryViewController.swift; sourceTree = "<group>"; };
+		42B786821CBEEBD300726097 /* AddNewMemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewMemoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			children = (
 				426E5D841CBE711E00340FFC /* ViewController.swift */,
 				42B786801CBEE0A000726097 /* SingleMemoryViewController.swift */,
+				42B786821CBEEBD300726097 /* AddNewMemoryViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42B786831CBEEBD300726097 /* AddNewMemoryViewController.swift in Sources */,
 				426E5D9E1CBE985600340FFC /* MemoryCell.swift in Sources */,
 				426E5D851CBE711E00340FFC /* ViewController.swift in Sources */,
 				42B786811CBEE0A000726097 /* SingleMemoryViewController.swift in Sources */,

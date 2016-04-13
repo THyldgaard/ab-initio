@@ -1,5 +1,5 @@
 //
-//  SingleMemoryViewController.swift
+//  AddNewMemoryViewController.swift
 //  ab-initio
 //
 //  Created by Tonni Hyldgaard on 4/13/16.
@@ -8,11 +8,12 @@
 
 import UIKit
 
-class SingleMemoryViewController: UIViewController {
+class AddNewMemoryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = true
+
         // Do any additional setup after loading the view.
     }
     
