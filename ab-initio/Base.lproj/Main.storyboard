@@ -58,9 +58,6 @@
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="18"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
-                                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                                <rect key="frame" x="10" y="12" width="170" height="21"/>
-                                                            </variation>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9My-or-v6Y">
                                                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -109,18 +106,18 @@
                                                         <mask key="constraints">
                                                             <exclude reference="LeR-0Y-yNZ"/>
                                                             <exclude reference="YkH-ag-SlT"/>
-                                                            <exclude reference="9QQ-Du-H3l"/>
-                                                            <exclude reference="AT8-AZ-ZQL"/>
-                                                            <exclude reference="HmZ-2F-vLB"/>
-                                                            <exclude reference="aBQ-9n-mDh"/>
-                                                            <exclude reference="nPc-Yk-WCS"/>
-                                                            <exclude reference="web-LU-agk"/>
                                                             <exclude reference="AgG-c2-FfR"/>
                                                             <exclude reference="T7U-Yi-7Qn"/>
                                                             <exclude reference="T8y-pO-VyH"/>
                                                             <exclude reference="YCg-oS-mIV"/>
                                                             <exclude reference="uBY-Ol-9ue"/>
                                                             <exclude reference="xZI-la-WEB"/>
+                                                            <exclude reference="9QQ-Du-H3l"/>
+                                                            <exclude reference="AT8-AZ-ZQL"/>
+                                                            <exclude reference="HmZ-2F-vLB"/>
+                                                            <exclude reference="aBQ-9n-mDh"/>
+                                                            <exclude reference="nPc-Yk-WCS"/>
+                                                            <exclude reference="web-LU-agk"/>
                                                         </mask>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=compact">
@@ -131,18 +128,18 @@
                                                         <mask key="constraints">
                                                             <exclude reference="LeR-0Y-yNZ"/>
                                                             <include reference="YkH-ag-SlT"/>
-                                                            <exclude reference="9QQ-Du-H3l"/>
-                                                            <exclude reference="AT8-AZ-ZQL"/>
-                                                            <exclude reference="HmZ-2F-vLB"/>
-                                                            <include reference="aBQ-9n-mDh"/>
-                                                            <include reference="nPc-Yk-WCS"/>
-                                                            <include reference="web-LU-agk"/>
                                                             <exclude reference="AgG-c2-FfR"/>
                                                             <include reference="T7U-Yi-7Qn"/>
                                                             <exclude reference="T8y-pO-VyH"/>
                                                             <include reference="YCg-oS-mIV"/>
                                                             <exclude reference="uBY-Ol-9ue"/>
                                                             <include reference="xZI-la-WEB"/>
+                                                            <exclude reference="9QQ-Du-H3l"/>
+                                                            <exclude reference="AT8-AZ-ZQL"/>
+                                                            <exclude reference="HmZ-2F-vLB"/>
+                                                            <include reference="aBQ-9n-mDh"/>
+                                                            <include reference="nPc-Yk-WCS"/>
+                                                            <include reference="web-LU-agk"/>
                                                         </mask>
                                                     </variation>
                                                 </view>
