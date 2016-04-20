@@ -12,8 +12,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableView: UITableView!
     
-    var countriesForMockImages = ["florence", "louvre-france", "copenhagen-denmark"]
-    var countriesForMockLabel = ["Italy", "France", "Denmark"]
+    // For mock data, to be deleted.
+    //var countriesForMockImages = ["florence", "louvre-france", "copenhagen-denmark"]
+    //var countriesForMockLabel = ["Italy", "France", "Denmark"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,16 +30,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCellWithIdentifier("MemoryCell") as? MemoryCell {
-            
-            let img = UIImage(named: countriesForMockImages[indexPath.row])!
-            
-            cell.configureCell(img, memoryCellText: countriesForMockLabel[indexPath.row])
-            
-            return cell
-        } else {
-            return MemoryCell()
-        }
+//        if let cell = tableView.dequeueReusableCellWithIdentifier("MemoryCell") as? MemoryCell {
+//            
+//            let img = UIImage(named: countriesForMockImages[indexPath.row])!
+//            cell.configureCell(img, memoryCellText: countriesForMockLabel[indexPath.row])
+//            
+//            return cell
+//        } else {
+//            return MemoryCell()
+//        }
+        return UITableViewCell()
         
     }
     
@@ -47,7 +48,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 0
     }
     
     

@@ -14,6 +14,8 @@
 		426E5D8D1CBE711E00340FFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 426E5D8C1CBE711E00340FFC /* Assets.xcassets */; };
 		426E5D901CBE711E00340FFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426E5D8E1CBE711E00340FFC /* LaunchScreen.storyboard */; };
 		426E5D9E1CBE985600340FFC /* MemoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426E5D9D1CBE985600340FFC /* MemoryCell.swift */; };
+		4275F4191CC7FEB100799760 /* Memory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4275F4171CC7FEB100799760 /* Memory+CoreDataProperties.swift */; };
+		4275F41A1CC7FEB100799760 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4275F4181CC7FEB100799760 /* Memory.swift */; };
 		42B786811CBEE0A000726097 /* SingleMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B786801CBEE0A000726097 /* SingleMemoryViewController.swift */; };
 		42B786831CBEEBD300726097 /* AddNewMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B786821CBEEBD300726097 /* AddNewMemoryViewController.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +30,8 @@
 		426E5D8F1CBE711E00340FFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		426E5D911CBE711E00340FFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		426E5D9D1CBE985600340FFC /* MemoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCell.swift; sourceTree = "<group>"; };
+		4275F4171CC7FEB100799760 /* Memory+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Memory+CoreDataProperties.swift"; path = "../Memory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4275F4181CC7FEB100799760 /* Memory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Memory.swift; path = ../Memory.swift; sourceTree = "<group>"; };
 		42B786801CBEE0A000726097 /* SingleMemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleMemoryViewController.swift; sourceTree = "<group>"; };
 		42B786821CBEEBD300726097 /* AddNewMemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewMemoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +81,8 @@
 		426E5D971CBE751200340FFC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4275F4171CC7FEB100799760 /* Memory+CoreDataProperties.swift */,
+				4275F4181CC7FEB100799760 /* Memory.swift */,
 				426E5D9D1CBE985600340FFC /* MemoryCell.swift */,
 			);
 			name = Models;
@@ -180,12 +186,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4275F41A1CC7FEB100799760 /* Memory.swift in Sources */,
 				42B786831CBEEBD300726097 /* AddNewMemoryViewController.swift in Sources */,
 				426E5D9E1CBE985600340FFC /* MemoryCell.swift in Sources */,
 				426E5D851CBE711E00340FFC /* ViewController.swift in Sources */,
 				42B786811CBEE0A000726097 /* SingleMemoryViewController.swift in Sources */,
 				426E5D8B1CBE711E00340FFC /* ab_initio.xcdatamodeld in Sources */,
 				426E5D831CBE711E00340FFC /* AppDelegate.swift in Sources */,
+				4275F4191CC7FEB100799760 /* Memory+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
