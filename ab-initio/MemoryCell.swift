@@ -18,9 +18,9 @@ class MemoryCell: UITableViewCell {
         // Initialization code
     }
     
-    func configureCell(image: UIImage, memoryCellText: String) {
-        mainMemoryImg.image = image
-        mainMemoryCellText.text = memoryCellText
+    func configureCell(memory: Memory) {
+        mainMemoryImg.image = memory.getMemoryImage()
+        mainMemoryCellText.text = memory.title
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

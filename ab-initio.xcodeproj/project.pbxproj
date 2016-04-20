@@ -83,7 +83,6 @@
 			children = (
 				4275F4171CC7FEB100799760 /* Memory+CoreDataProperties.swift */,
 				4275F4181CC7FEB100799760 /* Memory.swift */,
-				426E5D9D1CBE985600340FFC /* MemoryCell.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -91,6 +90,7 @@
 		426E5D981CBE751F00340FFC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				426E5D9D1CBE985600340FFC /* MemoryCell.swift */,
 				426E5D8E1CBE711E00340FFC /* LaunchScreen.storyboard */,
 				426E5D861CBE711E00340FFC /* Main.storyboard */,
 			);
