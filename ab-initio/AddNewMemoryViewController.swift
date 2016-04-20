@@ -13,6 +13,7 @@ class AddNewMemoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = true
+        self.hideKeyboardWhenTappedAround()
 
         // Do any additional setup after loading the view.
     }
