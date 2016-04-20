@@ -63,7 +63,34 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return memories.count
     }
     
-    
+    @IBAction func photoForNewMemory(sender: AnyObject) {
+        // Create the AlertController
+        let actionSheetController: UIAlertController = UIAlertController(title: "Please select", message: "How you would like to create your new memory?", preferredStyle: .ActionSheet)
+        
+        let cancleAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) {
+            action -> Void in // Dismisses the action sheet
+        }
+        
+        let takePhotoAction: UIAlertAction = UIAlertAction(title: "Take Photo", style: .Default) {
+            action -> Void in
+            
+            // Make something happen here ...
+        }
+        
+        let fromLibraryAction: UIAlertAction = UIAlertAction(title: "From Library", style: .Default) {
+            action -> Void in
+            // Make something happen here ...
+        }
+        
+        actionSheetController.addAction(cancleAction)
+        actionSheetController.addAction(takePhotoAction)
+        actionSheetController.addAction(fromLibraryAction)
+        
+        actionSheetController.popoverPresentationController?.sourceView = sender as? UIView
+        
+        self.presentViewController(actionSheetController, animated: true, completion: nil)
+        
+    }
 
 
 }
