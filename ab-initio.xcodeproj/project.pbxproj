@@ -7,24 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		421327E71CCDFBD200CDB2A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421327E51CCDFBD200CDB2A1 /* Main.storyboard */; };
 		426E5D831CBE711E00340FFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426E5D821CBE711E00340FFC /* AppDelegate.swift */; };
 		426E5D851CBE711E00340FFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426E5D841CBE711E00340FFC /* ViewController.swift */; };
-		426E5D881CBE711E00340FFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426E5D861CBE711E00340FFC /* Main.storyboard */; };
 		426E5D8B1CBE711E00340FFC /* ab_initio.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 426E5D891CBE711E00340FFC /* ab_initio.xcdatamodeld */; };
 		426E5D8D1CBE711E00340FFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 426E5D8C1CBE711E00340FFC /* Assets.xcassets */; };
 		426E5D901CBE711E00340FFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426E5D8E1CBE711E00340FFC /* LaunchScreen.storyboard */; };
 		426E5D9E1CBE985600340FFC /* MemoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426E5D9D1CBE985600340FFC /* MemoryCell.swift */; };
 		4275F4191CC7FEB100799760 /* Memory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4275F4171CC7FEB100799760 /* Memory+CoreDataProperties.swift */; };
 		4275F41A1CC7FEB100799760 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4275F4181CC7FEB100799760 /* Memory.swift */; };
+		429B945B1CCD4FD200CE6C75 /* TakePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429B945A1CCD4FD200CE6C75 /* TakePhoto.swift */; };
 		42B786811CBEE0A000726097 /* SingleMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B786801CBEE0A000726097 /* SingleMemoryViewController.swift */; };
 		42B786831CBEEBD300726097 /* AddNewMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B786821CBEEBD300726097 /* AddNewMemoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		421327E61CCDFBD200CDB2A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		426E5D7F1CBE711E00340FFC /* ab-initio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ab-initio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		426E5D821CBE711E00340FFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		426E5D841CBE711E00340FFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		426E5D871CBE711E00340FFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		426E5D8A1CBE711E00340FFC /* ab_initio.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ab_initio.xcdatamodel; sourceTree = "<group>"; };
 		426E5D8C1CBE711E00340FFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		426E5D8F1CBE711E00340FFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +33,7 @@
 		426E5D9D1CBE985600340FFC /* MemoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCell.swift; sourceTree = "<group>"; };
 		4275F4171CC7FEB100799760 /* Memory+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Memory+CoreDataProperties.swift"; path = "../Memory+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4275F4181CC7FEB100799760 /* Memory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Memory.swift; path = ../Memory.swift; sourceTree = "<group>"; };
+		429B945A1CCD4FD200CE6C75 /* TakePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakePhoto.swift; sourceTree = "<group>"; };
 		42B786801CBEE0A000726097 /* SingleMemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleMemoryViewController.swift; sourceTree = "<group>"; };
 		42B786821CBEEBD300726097 /* AddNewMemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewMemoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,7 +94,7 @@
 			children = (
 				426E5D9D1CBE985600340FFC /* MemoryCell.swift */,
 				426E5D8E1CBE711E00340FFC /* LaunchScreen.storyboard */,
-				426E5D861CBE711E00340FFC /* Main.storyboard */,
+				421327E51CCDFBD200CDB2A1 /* Main.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -110,8 +112,17 @@
 		426E5D9A1CBE752A00340FFC /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				429B94591CCD4FA600CE6C75 /* Photo */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		429B94591CCD4FA600CE6C75 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				429B945A1CCD4FD200CE6C75 /* TakePhoto.swift */,
+			);
+			name = Photo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,9 +184,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				421327E71CCDFBD200CDB2A1 /* Main.storyboard in Resources */,
 				426E5D901CBE711E00340FFC /* LaunchScreen.storyboard in Resources */,
 				426E5D8D1CBE711E00340FFC /* Assets.xcassets in Resources */,
-				426E5D881CBE711E00340FFC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +201,7 @@
 				42B786831CBEEBD300726097 /* AddNewMemoryViewController.swift in Sources */,
 				426E5D9E1CBE985600340FFC /* MemoryCell.swift in Sources */,
 				426E5D851CBE711E00340FFC /* ViewController.swift in Sources */,
+				429B945B1CCD4FD200CE6C75 /* TakePhoto.swift in Sources */,
 				42B786811CBEE0A000726097 /* SingleMemoryViewController.swift in Sources */,
 				426E5D8B1CBE711E00340FFC /* ab_initio.xcdatamodeld in Sources */,
 				426E5D831CBE711E00340FFC /* AppDelegate.swift in Sources */,
@@ -200,10 +212,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		426E5D861CBE711E00340FFC /* Main.storyboard */ = {
+		421327E51CCDFBD200CDB2A1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				426E5D871CBE711E00340FFC /* Base */,
+				421327E61CCDFBD200CDB2A1 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

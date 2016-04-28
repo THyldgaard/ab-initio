@@ -27,7 +27,7 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
 
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+    private func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
         newMemoryImage.image = image
     }
@@ -41,6 +41,9 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
         presentViewController(imagePicker, animated: true, completion: nil)
     }
     
+    // need init with aDecoder and aCoder
+    
+    
     @IBAction func createNewMemory(sender: AnyObject) {
         if let title = memoryTitle.text where title != "" {
             let app = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -51,7 +54,7 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
             memory.title = title
             memory.descriptionTextField = memoryDescription.text
             memory.setMemoryImage(newMemoryImage.image!)
-            memory.setWeatherImage(newMemoryImage.image!) // Change this!
+            memory.setWeatherImage(newMemoryImage.image!) // Change this, so that it reflects the weather icon!
             memory.date = NSDate()
             memory.temperature = 22.2
             
@@ -59,12 +62,19 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
             
             do {
                 try context.save()
+                self.navigationController?.popViewControllerAnimated(true)
             } catch {
                 print("Could not save memory")
+                showAlert("Alert", message: "Sorry, but the Memory couldn't be saved, please try again.")
             }
             
-            self.navigationController?.popViewControllerAnimated(true)
         }
+    }
+    
+    private func showAlert(titleAlert: String, message: String) {
+        let alert = UIAlertController(title: titleAlert, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 
     /*

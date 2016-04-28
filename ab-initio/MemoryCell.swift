@@ -17,11 +17,6 @@ class MemoryCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    
-    func configureCell(memory: Memory) {
-        mainMemoryImg.image = memory.getMemoryImage()
-        mainMemoryCellText.text = memory.title
-    }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

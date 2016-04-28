@@ -9,18 +9,20 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
     var memories = [Memory]()
-//    var fetchedResultsController: NSFetchedResultsController! <-- For more complex results
-    
+    var fetchedResultsController: NSFetchedResultsController!
+    let imagePicker: UIImagePickerController! = UIImagePickerController()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-    
+        imagePicker.delegate = self
+
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -46,7 +48,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCellWithIdentifier("MemoryCell") as? MemoryCell {
             let memory = memories[indexPath.row]
-            cell.configureCell(memory)
+            configureCell(memory, cell: cell)
             
             return cell
         } else {
@@ -63,36 +65,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return memories.count
     }
     
-    @IBAction func photoForNewMemory(sender: AnyObject) {
-        // Create the AlertController
-        let actionSheetController: UIAlertController = UIAlertController(title: "Please select", message: "How you would like to create your new memory?", preferredStyle: .ActionSheet)
-        
-        let cancleAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) {
-            action -> Void in // Dismisses the action sheet
-        }
-        
-        let takePhotoAction: UIAlertAction = UIAlertAction(title: "Take Photo", style: .Default) {
-            action -> Void in
-            
-            // Make something happen here ...
-        }
-        
-        let fromLibraryAction: UIAlertAction = UIAlertAction(title: "From Library", style: .Default) {
-            action -> Void in
-            // Make something happen here ...
-        }
-        
-        actionSheetController.addAction(cancleAction)
-        actionSheetController.addAction(takePhotoAction)
-        actionSheetController.addAction(fromLibraryAction)
-        
-        actionSheetController.popoverPresentationController?.sourceView = sender as? UIView
-        
-        self.presentViewController(actionSheetController, animated: true, completion: nil)
-        
+    func configureCell(memory: Memory, cell: MemoryCell) {
+        cell.mainMemoryImg.image = memory.getMemoryImage()
+        cell.mainMemoryCellText.text = memory.title
     }
-
-
+    
+    
 }
 
 // This extension code is used to hide the keyboard after a user has tapped a random place on the screen
