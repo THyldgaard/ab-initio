@@ -57,6 +57,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -67,7 +71,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func configureCell(memory: Memory, cell: MemoryCell) {
         cell.mainMemoryImg.image = memory.getMemoryImage()
-        cell.mainMemoryCellText.text = memory.title
+        cell.mainMemoryCellText.text = memory.getMemoryTitle()
     }
     
     

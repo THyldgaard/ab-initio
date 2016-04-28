@@ -22,6 +22,10 @@ class SingleMemoryViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    private func configureView() {
+        
+    }
+    
 
     /*
     // MARK: - Navigation

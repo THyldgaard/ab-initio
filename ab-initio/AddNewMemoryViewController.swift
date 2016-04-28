@@ -41,9 +41,6 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
         presentViewController(imagePicker, animated: true, completion: nil)
     }
     
-    // need init with aDecoder and aCoder
-    
-    
     @IBAction func createNewMemory(sender: AnyObject) {
         if let title = memoryTitle.text where title != "" {
             let app = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -51,12 +48,12 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
             let entity = NSEntityDescription.entityForName("Memory", inManagedObjectContext: context)!
             let memory = Memory(entity: entity, insertIntoManagedObjectContext: context)
            
-            memory.title = title
-            memory.descriptionTextField = memoryDescription.text
+            memory.setMemoryTitle(title)
+            memory.setMemoryDescriptionTextField(memoryDescription.text)
             memory.setMemoryImage(newMemoryImage.image!)
-            memory.setWeatherImage(newMemoryImage.image!) // Change this, so that it reflects the weather icon!
-            memory.date = NSDate()
-            memory.temperature = 22.2
+            memory.setMemoryWeatherImage(UIImage(named: "Sunshine")!) // Change this, so that it reflects the weather!
+            memory.setMemoryDate(NSDate())
+            memory.setMemoryTemperature(22.2) // Change this, so that it reflects the weather!
             
             context.insertObject(memory)
             

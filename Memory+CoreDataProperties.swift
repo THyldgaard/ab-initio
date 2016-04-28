@@ -2,7 +2,7 @@
 //  Memory+CoreDataProperties.swift
 //  ab-initio
 //
-//  Created by Tonni Hyldgaard on 4/20/16.
+//  Created by Tonni Hyldgaard on 4/28/16.
 //  Copyright © 2016 Tonni Hyldgaard. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -14,11 +14,11 @@ import CoreData
 
 extension Memory {
 
+    @NSManaged var date: String?
+    @NSManaged var descriptionTextField: String?
     @NSManaged var imageMemory: NSData?
     @NSManaged var imageWeather: NSData?
-    @NSManaged var title: String?
-    @NSManaged var date: NSDate?
-    @NSManaged var descriptionTextField: String?
     @NSManaged var temperature: NSNumber?
+    @NSManaged var title: String?
 
 }
