@@ -37,6 +37,8 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        locationManager.stopUpdatingLocation()
+        
         let location: CLLocation = locations[locations.count - 1]
         
         if currentLocation == nil {
@@ -44,11 +46,31 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
         }
         
         print("location: \(currentLocation.coordinate.latitude) \(currentLocation.coordinate.longitude)")
-        locationManager.stopUpdatingLocation()
+        setUsersClosestCity()
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        
+        print("Location Manager Error: Description ->\(error.localizedDescription) : Reason -> \(error.localizedFailureReason)")
+        print("Error code: -> \(error.code)")
+    }
+    
+    func setUsersClosestCity() {
+        let geoCoder = CLGeocoder()
+        let location = CLLocation(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
+        geoCoder.reverseGeocodeLocation(location) {
+            (placemarks, error) -> Void in
+            
+            let placeArray = placemarks as [CLPlacemark]!
+            
+            // Place details
+            let placeMark: CLPlacemark! = placeArray?[0]
+            //placeMark = placeArray?[0]
+            
+            // City
+            if let city = placeMark.addressDictionary?["City"] as? NSString {
+                print(city)
+            }
+        }
     }
     
     private func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
