@@ -58,19 +58,15 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
         let location = CLLocation(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
         geoCoder.reverseGeocodeLocation(location) {
             (placemarks, error) -> Void in
-            
-            let placeArray = placemarks as [CLPlacemark]!
-            
-            // Place details
-            let placeMark: CLPlacemark! = placeArray?[0]
-            //placeMark = placeArray?[0]
-            
-            // City
+            let placeMark: CLPlacemark! = (placemarks?[0])!
             if let city = placeMark.addressDictionary?["City"] as? NSString {
-                self.memoryTitle.text = "\(city)"
-                print(city)
+                self.autoUpdateMemoryTitle(city)
             }
         }
+    }
+    
+    private func autoUpdateMemoryTitle(title: NSString) {
+        memoryTitle.text = title as String
     }
     
     private func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
