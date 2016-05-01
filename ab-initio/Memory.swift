@@ -2,7 +2,7 @@
 //  Memory.swift
 //  ab-initio
 //
-//  Created by Tonni Hyldgaard on 4/28/16.
+//  Created by Tonni Hyldgaard on 5/2/16.
 //  Copyright © 2016 Tonni Hyldgaard. All rights reserved.
 //
 
@@ -38,7 +38,15 @@ class Memory: NSManagedObject {
     }
     
     func setMemoryTemperature(temp: NSNumber) {
-        self.temperature = temp
+        self.temperature = temp as Double
+    }
+    
+    func setMemoryLatitude(lat: NSNumber) {
+        self.latitude = lat as Double
+    }
+    
+    func setMemoryLongitude(lon: NSNumber) {
+        self.longitude = lon as Double
     }
     
     func getMemoryImage() -> UIImage {
@@ -64,7 +72,14 @@ class Memory: NSManagedObject {
     }
     
     func getMemoryTemperature() -> NSNumber {
-        return temperature!
+        return temperature as! Double
     }
-
+    
+    func getMemoryLatitude() -> NSNumber {
+        return latitude as! Double
+    }
+    
+    func getMemoryLongitude() -> NSNumber {
+        return longitude as! Double
+    }
 }

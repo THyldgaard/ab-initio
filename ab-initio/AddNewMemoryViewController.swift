@@ -96,6 +96,8 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
             memory.setMemoryWeatherImage(UIImage(named: "Sunshine")!) // Change this, so that it reflects the weather!
             memory.setMemoryDate(NSDate())
             memory.setMemoryTemperature(22.2) // Change this, so that it reflects the weather!
+            memory.setMemoryLatitude(currentLocation.coordinate.latitude)
+            memory.setMemoryLongitude(currentLocation.coordinate.longitude)
             
             context.insertObject(memory)
             

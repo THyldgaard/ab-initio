@@ -2,7 +2,7 @@
 //  Memory+CoreDataProperties.swift
 //  ab-initio
 //
-//  Created by Tonni Hyldgaard on 4/28/16.
+//  Created by Tonni Hyldgaard on 5/2/16.
 //  Copyright © 2016 Tonni Hyldgaard. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -20,5 +20,7 @@ extension Memory {
     @NSManaged var imageWeather: NSData?
     @NSManaged var temperature: NSNumber?
     @NSManaged var title: String?
+    @NSManaged var latitude: NSNumber?
+    @NSManaged var longitude: NSNumber?
 
 }

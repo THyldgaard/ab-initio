@@ -17,8 +17,8 @@
 		429B945B1CCD4FD200CE6C75 /* TakePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429B945A1CCD4FD200CE6C75 /* TakePhoto.swift */; };
 		42B786811CBEE0A000726097 /* SingleMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B786801CBEE0A000726097 /* SingleMemoryViewController.swift */; };
 		42B786831CBEEBD300726097 /* AddNewMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B786821CBEEBD300726097 /* AddNewMemoryViewController.swift */; };
-		42DEF7C31CD2B41900F9550C /* Memory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DEF7C11CD2B41900F9550C /* Memory+CoreDataProperties.swift */; };
-		42DEF7C41CD2B41900F9550C /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DEF7C21CD2B41900F9550C /* Memory.swift */; };
+		42E40DCB1CD6BFA7005F636A /* Memory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E40DC91CD6BFA7005F636A /* Memory+CoreDataProperties.swift */; };
+		42E40DCC1CD6BFA7005F636A /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E40DCA1CD6BFA7005F636A /* Memory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +34,8 @@
 		429B945A1CCD4FD200CE6C75 /* TakePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakePhoto.swift; sourceTree = "<group>"; };
 		42B786801CBEE0A000726097 /* SingleMemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleMemoryViewController.swift; sourceTree = "<group>"; };
 		42B786821CBEEBD300726097 /* AddNewMemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewMemoryViewController.swift; sourceTree = "<group>"; };
-		42DEF7C11CD2B41900F9550C /* Memory+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Memory+CoreDataProperties.swift"; path = "../Memory+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		42DEF7C21CD2B41900F9550C /* Memory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Memory.swift; path = ../Memory.swift; sourceTree = "<group>"; };
+		42E40DC91CD6BFA7005F636A /* Memory+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Memory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		42E40DCA1CD6BFA7005F636A /* Memory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +83,8 @@
 		426E5D971CBE751200340FFC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				42DEF7C11CD2B41900F9550C /* Memory+CoreDataProperties.swift */,
-				42DEF7C21CD2B41900F9550C /* Memory.swift */,
+				42E40DC91CD6BFA7005F636A /* Memory+CoreDataProperties.swift */,
+				42E40DCA1CD6BFA7005F636A /* Memory.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -197,14 +197,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42DEF7C41CD2B41900F9550C /* Memory.swift in Sources */,
+				42E40DCC1CD6BFA7005F636A /* Memory.swift in Sources */,
 				42B786831CBEEBD300726097 /* AddNewMemoryViewController.swift in Sources */,
 				426E5D9E1CBE985600340FFC /* MemoryCell.swift in Sources */,
 				426E5D851CBE711E00340FFC /* ViewController.swift in Sources */,
 				429B945B1CCD4FD200CE6C75 /* TakePhoto.swift in Sources */,
 				42B786811CBEE0A000726097 /* SingleMemoryViewController.swift in Sources */,
 				426E5D8B1CBE711E00340FFC /* ab_initio.xcdatamodeld in Sources */,
-				42DEF7C31CD2B41900F9550C /* Memory+CoreDataProperties.swift in Sources */,
+				42E40DCB1CD6BFA7005F636A /* Memory+CoreDataProperties.swift in Sources */,
 				426E5D831CBE711E00340FFC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
