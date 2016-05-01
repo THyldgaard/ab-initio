@@ -51,7 +51,6 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         print("Location Manager Error: Description ->\(error.localizedDescription) : Reason -> \(error.localizedFailureReason)")
-        print("Error code: -> \(error.code)")
     }
     
     func setUsersClosestCity() {
@@ -68,6 +67,7 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
             
             // City
             if let city = placeMark.addressDictionary?["City"] as? NSString {
+                self.memoryTitle.text = "\(city)"
                 print(city)
             }
         }
