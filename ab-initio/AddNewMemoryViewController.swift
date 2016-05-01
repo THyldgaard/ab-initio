@@ -46,16 +46,16 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
         }
         
         print("location: \(currentLocation.coordinate.latitude) \(currentLocation.coordinate.longitude)")
-        setUsersClosestCity()
+        setCityAndUpdateTitle(currentLocation.coordinate.latitude, lon: currentLocation.coordinate.longitude)
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         print("Location Manager Error: Description ->\(error.localizedDescription) : Reason -> \(error.localizedFailureReason)")
     }
     
-    func setUsersClosestCity() {
+    func setCityAndUpdateTitle(lat: CLLocationDegrees, lon: CLLocationDegrees) {
         let geoCoder = CLGeocoder()
-        let location = CLLocation(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
+        let location = CLLocation(latitude: lat, longitude: lon)
         geoCoder.reverseGeocodeLocation(location) {
             (placemarks, error) -> Void in
             let placeMark: CLPlacemark! = (placemarks?[0])!
