@@ -43,10 +43,10 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
         
         if currentLocation == nil {
             currentLocation = location
+            setCityAndUpdateTitle(currentLocation.coordinate.latitude, lon: currentLocation.coordinate.longitude)
         }
         
-        print("location: \(currentLocation.coordinate.latitude) \(currentLocation.coordinate.longitude)")
-        setCityAndUpdateTitle(currentLocation.coordinate.latitude, lon: currentLocation.coordinate.longitude)
+        //print("location: \(currentLocation.coordinate.latitude) \(currentLocation.coordinate.longitude)")
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
