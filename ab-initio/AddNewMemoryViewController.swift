@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreData
+import CoreLocation
 
-class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate {
 
     @IBOutlet weak var memoryTitle: UITextField!
     @IBOutlet weak var memoryDescription: UITextView!
@@ -17,6 +18,8 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
     @IBOutlet weak var addNewMemoryButton: UIButton!
     
     var imagePicker: UIImagePickerController!
+    var locationManager: CLLocationManager = CLLocationManager()
+    var currentLocation: CLLocation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +27,28 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
         
         imagePicker = UIImagePickerController()
         imagePicker.delegate = self
+        
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        currentLocation = nil
 
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location: CLLocation = locations[locations.count - 1]
+        
+        if currentLocation == nil {
+            currentLocation = location
+        }
+        
+        print("location: \(currentLocation.coordinate.latitude) \(currentLocation.coordinate.longitude)")
+        locationManager.stopUpdatingLocation()
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        
     }
     
     private func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
