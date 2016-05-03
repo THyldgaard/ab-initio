@@ -17,7 +17,7 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
     @IBOutlet weak var newMemoryImage: UIImageView!
     @IBOutlet weak var addNewMemoryButton: UIButton!
     
-    var imagePicker: UIImagePickerController!
+    var imagePicker: UIImagePickerController = UIImagePickerController()
     var locationManager: CLLocationManager = CLLocationManager()
     var currentLocation: CLLocation!
     
@@ -25,7 +25,6 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         
-        imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -73,9 +72,10 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
         memoryTitle.text = title as String
     }
     
-    private func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
-        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         newMemoryImage.image = image
+        imagePicker.dismissViewControllerAnimated(true, completion: nil)
+ 
     }
     
     override func didReceiveMemoryWarning() {
