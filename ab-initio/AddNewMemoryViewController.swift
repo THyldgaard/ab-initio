@@ -17,7 +17,7 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
     @IBOutlet weak var newMemoryImage: UIImageView!
     @IBOutlet weak var addNewMemoryButton: UIButton!
     
-    var imagePicker: UIImagePickerController = UIImagePickerController()
+    var imagePicker: UIImagePickerController!
     var locationManager: CLLocationManager = CLLocationManager()
     var currentLocation: CLLocation!
     
@@ -25,7 +25,7 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         
-        imagePicker.delegate = self
+        setupImagePicker()
         
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.delegate = self
@@ -75,7 +75,6 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         newMemoryImage.image = image
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
- 
     }
     
     override func didReceiveMemoryWarning() {
@@ -93,6 +92,7 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
         let takePhotoAction: UIAlertAction = UIAlertAction(title: "Take Photo", style: .Default) {
             action -> Void in
             print("Take Photo")
+            self.setupImagePicker()
             // Make something happen here ...
             if (UIImagePickerController.isSourceTypeAvailable(.Camera)) {
                 if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
@@ -104,12 +104,14 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
                     TakePhoto().handleAlert("Rear camera doesn't exits", message: "Application canot access the camera")
                 }
             } else {
+                print("From Library")
                 TakePhoto().handleAlert("Camera inaccessable", message: "Application cannot access the camera")
             }
         }
         
         let fromLibraryAction: UIAlertAction = UIAlertAction(title: "From Library", style: .Default) {
             action -> Void in
+            self.setupImagePicker()
             self.presentViewController(self.imagePicker, animated: true, completion: nil)
         }
         
@@ -121,6 +123,11 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
         
         self.presentViewController(actionSheetController, animated: true, completion: nil)
 
+    }
+    
+    func setupImagePicker() {
+        self.imagePicker = UIImagePickerController()
+        self.imagePicker.delegate = self
     }
     
     @IBAction func createNewMemory(sender: AnyObject) {
