@@ -84,7 +84,43 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
     }
     
     @IBAction func addImage(sender: AnyObject) {
-        presentViewController(imagePicker, animated: true, completion: nil)
+        let actionSheetController: UIAlertController = UIAlertController(title: "Please select", message: "How you would like to create your new memory?", preferredStyle: .ActionSheet)
+        
+        let cancleAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) {
+            action -> Void in // Dismisses the action sheet
+        }
+        
+        let takePhotoAction: UIAlertAction = UIAlertAction(title: "Take Photo", style: .Default) {
+            action -> Void in
+            print("Take Photo")
+            // Make something happen here ...
+            if (UIImagePickerController.isSourceTypeAvailable(.Camera)) {
+                if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
+                    self.imagePicker.allowsEditing = false
+                    self.imagePicker.sourceType = .Camera
+                    self.imagePicker.cameraCaptureMode = .Photo
+                    self.presentViewController(self.imagePicker, animated: true, completion: {})
+                } else {
+                    TakePhoto().handleAlert("Rear camera doesn't exits", message: "Application canot access the camera")
+                }
+            } else {
+                TakePhoto().handleAlert("Camera inaccessable", message: "Application cannot access the camera")
+            }
+        }
+        
+        let fromLibraryAction: UIAlertAction = UIAlertAction(title: "From Library", style: .Default) {
+            action -> Void in
+            self.presentViewController(self.imagePicker, animated: true, completion: nil)
+        }
+        
+        actionSheetController.addAction(cancleAction)
+        actionSheetController.addAction(takePhotoAction)
+        actionSheetController.addAction(fromLibraryAction)
+        
+        actionSheetController.popoverPresentationController?.sourceView = sender as? UIView
+        
+        self.presentViewController(actionSheetController, animated: true, completion: nil)
+
     }
     
     @IBAction func createNewMemory(sender: AnyObject) {
