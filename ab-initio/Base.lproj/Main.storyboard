@@ -103,7 +103,7 @@
                                                                 </mask>
                                                             </variation>
                                                             <connections>
-                                                                <segue destination="Wle-BS-3OI" kind="show" identifier="" id="Xir-Tz-C4e"/>
+                                                                <segue destination="Wle-BS-3OI" kind="show" identifier="showMemory" id="Xir-Tz-C4e"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -340,14 +340,14 @@
                     <navigationItem key="navigationItem" title="Memories" id="fLM-gM-EQL">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="0Ez-Cz-C0B">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sgo-Tx-qtj">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <rect key="frame" x="20" y="7" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="MenuIcon"/>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="4Cb-E7-rib">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="A7k-XP-uA9">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <rect key="frame" x="534" y="7" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Settings-icon"/>
                             </button>

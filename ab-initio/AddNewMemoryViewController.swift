@@ -46,7 +46,7 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
             setCityAndUpdateTitle(currentLocation.coordinate.latitude, lon: currentLocation.coordinate.longitude)
         }
         
-        //print("location: \(currentLocation.coordinate.latitude) \(currentLocation.coordinate.longitude)")
+        print("location: \(currentLocation.coordinate.latitude) \(currentLocation.coordinate.longitude)")
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
@@ -59,9 +59,13 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
         geoCoder.reverseGeocodeLocation(location) {
             (placemarks, error) -> Void in
             let placeMark: CLPlacemark! = (placemarks?[0])!
-            if let city = placeMark.addressDictionary?["City"] as? NSString {
-                self.autoUpdateMemoryTitle(city)
-            }
+            self.determineCityLocation(placeMark)
+        }
+    }
+    
+    private func determineCityLocation(placeMark: CLPlacemark) {
+        if let city = placeMark.addressDictionary?["City"] as? NSString {
+            self.autoUpdateMemoryTitle(city)
         }
     }
     

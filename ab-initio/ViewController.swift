@@ -58,7 +58,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        //performSegueWithIdentifier("showMemory", sender: indexPath)
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -69,10 +69,32 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return memories.count
     }
     
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            let moc = appDelegate.managedObjectContext
+            
+            moc.deleteObject(memories[indexPath.row])
+            appDelegate.saveContext()
+            
+            memories.removeAtIndex(indexPath.row)
+            tableView.reloadData()
+        }
+    }
+    
     func configureCell(memory: Memory, cell: MemoryCell) {
         cell.mainMemoryImg.image = memory.getMemoryImage()
         cell.mainMemoryCellText.text = memory.getMemoryTitle()
     }
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "showMemory" {
+//            var memoryViewController: SingleMemoryViewController = segue.destinationViewController as! SingleMemoryViewController
+//            let indexPath = sender as! NSIndexPath
+//            
+//            
+//        }
+//    }
     
     
 }
