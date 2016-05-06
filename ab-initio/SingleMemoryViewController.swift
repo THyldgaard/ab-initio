@@ -39,7 +39,7 @@ class SingleMemoryViewController: UIViewController {
         self.dateMemory.text = "Date: \(memoryCellData!.getMemoryDate())"
         self.descriptionMemory.text = memoryCellData!.getMemoryDescriptionTextField()
         self.weatherMemory.image = memoryCellData!.getMemoryWeatherImage()
-        self.temperatureMemory.text = "\(memoryCellData!.getMemoryTemperature())C˚"
+        self.temperatureMemory.text = "\(memoryCellData!.getMemoryTemperature())˚C"
     }
     
 

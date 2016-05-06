@@ -42,11 +42,11 @@ class Memory: NSManagedObject {
     }
     
     func setMemoryLatitude(lat: NSNumber) {
-        self.latitude = lat as Double
+        self.latitude = self.convertCoordinateToThreeDigits(lat)
     }
     
     func setMemoryLongitude(lon: NSNumber) {
-        self.longitude = lon as Double
+        self.longitude = self.convertCoordinateToThreeDigits(lon)
     }
     
     func getMemoryImage() -> UIImage {
@@ -72,7 +72,7 @@ class Memory: NSManagedObject {
     }
     
     func getMemoryTemperature() -> NSNumber {
-        return temperature as! Double
+        return temperature as! Int
     }
     
     func getMemoryLatitude() -> NSNumber {
@@ -81,5 +81,9 @@ class Memory: NSManagedObject {
     
     func getMemoryLongitude() -> NSNumber {
         return longitude as! Double
+    }
+    
+    private func convertCoordinateToThreeDigits(coor: NSNumber) -> Double {
+        return Double(round((coor as Double) * 10000) / 10000) // To get to .3digits
     }
 }
