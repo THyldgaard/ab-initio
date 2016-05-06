@@ -576,27 +576,11 @@
                                 <exclude reference="kA4-TU-Kbo"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="173-Lj-Nx3"/>
-                                <exclude reference="NFZ-dP-yLe"/>
-                                <exclude reference="Sge-Ho-mf8"/>
-                                <exclude reference="wuM-FM-TM1"/>
                                 <exclude reference="M0L-u5-baH"/>
                                 <exclude reference="Ybg-c6-rQK"/>
                                 <exclude reference="zTT-7f-Dz2"/>
                                 <exclude reference="SPr-BE-zrg"/>
                                 <exclude reference="Y7U-OR-8fs"/>
-                                <exclude reference="4nF-gd-dEM"/>
-                                <exclude reference="FEk-xt-Wbe"/>
-                                <exclude reference="ODQ-xz-iAi"/>
-                                <exclude reference="PEd-bK-1Xr"/>
-                                <exclude reference="olK-h8-QcY"/>
-                                <exclude reference="ynJ-iv-gVC"/>
-                                <exclude reference="46b-c7-CIb"/>
-                                <exclude reference="KB9-Kl-f1I"/>
-                                <exclude reference="PRG-3m-tMQ"/>
-                                <exclude reference="Ede-mD-ZMR"/>
-                                <exclude reference="O92-gC-vcB"/>
-                                <exclude reference="stq-Cb-wlY"/>
                                 <exclude reference="CMf-F8-6Fd"/>
                                 <exclude reference="Nmt-MR-cl2"/>
                                 <exclude reference="TXv-as-1Tf"/>
@@ -606,6 +590,22 @@
                                 <exclude reference="vBH-sq-0pc"/>
                                 <exclude reference="vz1-iz-I4X"/>
                                 <exclude reference="w5i-Qz-pPY"/>
+                                <exclude reference="4nF-gd-dEM"/>
+                                <exclude reference="FEk-xt-Wbe"/>
+                                <exclude reference="ODQ-xz-iAi"/>
+                                <exclude reference="PEd-bK-1Xr"/>
+                                <exclude reference="olK-h8-QcY"/>
+                                <exclude reference="ynJ-iv-gVC"/>
+                                <exclude reference="46b-c7-CIb"/>
+                                <exclude reference="KB9-Kl-f1I"/>
+                                <exclude reference="PRG-3m-tMQ"/>
+                                <exclude reference="173-Lj-Nx3"/>
+                                <exclude reference="NFZ-dP-yLe"/>
+                                <exclude reference="Sge-Ho-mf8"/>
+                                <exclude reference="wuM-FM-TM1"/>
+                                <exclude reference="Ede-mD-ZMR"/>
+                                <exclude reference="O92-gC-vcB"/>
+                                <exclude reference="stq-Cb-wlY"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -619,27 +619,11 @@
                                 <include reference="kA4-TU-Kbo"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="173-Lj-Nx3"/>
-                                <include reference="NFZ-dP-yLe"/>
-                                <include reference="Sge-Ho-mf8"/>
-                                <include reference="wuM-FM-TM1"/>
                                 <exclude reference="M0L-u5-baH"/>
                                 <include reference="Ybg-c6-rQK"/>
                                 <include reference="zTT-7f-Dz2"/>
                                 <include reference="SPr-BE-zrg"/>
                                 <include reference="Y7U-OR-8fs"/>
-                                <include reference="4nF-gd-dEM"/>
-                                <exclude reference="FEk-xt-Wbe"/>
-                                <include reference="ODQ-xz-iAi"/>
-                                <include reference="PEd-bK-1Xr"/>
-                                <include reference="olK-h8-QcY"/>
-                                <exclude reference="ynJ-iv-gVC"/>
-                                <exclude reference="46b-c7-CIb"/>
-                                <exclude reference="KB9-Kl-f1I"/>
-                                <include reference="PRG-3m-tMQ"/>
-                                <exclude reference="Ede-mD-ZMR"/>
-                                <exclude reference="O92-gC-vcB"/>
-                                <include reference="stq-Cb-wlY"/>
                                 <include reference="CMf-F8-6Fd"/>
                                 <exclude reference="Nmt-MR-cl2"/>
                                 <exclude reference="TXv-as-1Tf"/>
@@ -649,6 +633,22 @@
                                 <exclude reference="vBH-sq-0pc"/>
                                 <include reference="vz1-iz-I4X"/>
                                 <exclude reference="w5i-Qz-pPY"/>
+                                <include reference="4nF-gd-dEM"/>
+                                <exclude reference="FEk-xt-Wbe"/>
+                                <include reference="ODQ-xz-iAi"/>
+                                <include reference="PEd-bK-1Xr"/>
+                                <include reference="olK-h8-QcY"/>
+                                <exclude reference="ynJ-iv-gVC"/>
+                                <exclude reference="46b-c7-CIb"/>
+                                <exclude reference="KB9-Kl-f1I"/>
+                                <include reference="PRG-3m-tMQ"/>
+                                <exclude reference="173-Lj-Nx3"/>
+                                <include reference="NFZ-dP-yLe"/>
+                                <include reference="Sge-Ho-mf8"/>
+                                <include reference="wuM-FM-TM1"/>
+                                <exclude reference="Ede-mD-ZMR"/>
+                                <exclude reference="O92-gC-vcB"/>
+                                <include reference="stq-Cb-wlY"/>
                             </mask>
                         </variation>
                     </view>

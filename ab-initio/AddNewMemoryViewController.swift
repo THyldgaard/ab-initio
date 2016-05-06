@@ -44,8 +44,6 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
             currentLocation = location
             setCityAndUpdateTitle(currentLocation.coordinate.latitude, lon: currentLocation.coordinate.longitude)
         }
-        
-        print("location: \(currentLocation.coordinate.latitude) \(currentLocation.coordinate.longitude)")
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
@@ -93,7 +91,6 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
             action -> Void in
             print("Take Photo")
             self.setupImagePicker()
-            // Make something happen here ...
             if (UIImagePickerController.isSourceTypeAvailable(.Camera)) {
                 if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
                     self.imagePicker.allowsEditing = false
