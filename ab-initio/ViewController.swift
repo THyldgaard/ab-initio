@@ -58,7 +58,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //performSegueWithIdentifier("showMemory", sender: indexPath)
+        performSegueWithIdentifier("showMemory", sender: indexPath)
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -87,14 +87,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.mainMemoryCellText.text = memory.getMemoryTitle()
     }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == "showMemory" {
-//            var memoryViewController: SingleMemoryViewController = segue.destinationViewController as! SingleMemoryViewController
-//            let indexPath = sender as! NSIndexPath
-//            
-//            
-//        }
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showMemory" {
+            let indexPath = sender as! NSIndexPath
+            let memoryViewController: SingleMemoryViewController = segue.destinationViewController as! SingleMemoryViewController
+            print(memories[indexPath.row])
+            print(indexPath.row)
+            memoryViewController.memoryCellData = memories[indexPath.row]
+            
+        } 
+    }
     
     
 }

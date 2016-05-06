@@ -475,34 +475,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22˚C" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amd-Gf-xNp">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="0TV-3Y-uC5"/>
-                                    <constraint firstAttribute="height" constant="23" id="ndY-lo-6OJ"/>
-                                    <constraint firstAttribute="width" constant="46" id="ulZ-Ef-x64"/>
-                                    <constraint firstAttribute="width" constant="42" id="xC4-2Z-5iV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="19"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="0TV-3Y-uC5"/>
-                                        <exclude reference="ndY-lo-6OJ"/>
-                                        <exclude reference="ulZ-Ef-x64"/>
-                                        <exclude reference="xC4-2Z-5iV"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <exclude reference="0TV-3Y-uC5"/>
-                                        <include reference="ndY-lo-6OJ"/>
-                                        <include reference="ulZ-Ef-x64"/>
-                                        <exclude reference="xC4-2Z-5iV"/>
-                                    </mask>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location: 41.902, 12.496" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqY-uw-PJo">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <constraints>
@@ -528,6 +500,34 @@
                                         <include reference="Hxd-sa-YiS"/>
                                         <exclude reference="muV-x0-EhB"/>
                                         <include reference="utl-wy-r4w"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22˚C" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amd-Gf-xNp">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="0TV-3Y-uC5"/>
+                                    <constraint firstAttribute="height" constant="23" id="ndY-lo-6OJ"/>
+                                    <constraint firstAttribute="width" constant="46" id="ulZ-Ef-x64"/>
+                                    <constraint firstAttribute="width" constant="42" id="xC4-2Z-5iV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0TV-3Y-uC5"/>
+                                        <exclude reference="ndY-lo-6OJ"/>
+                                        <exclude reference="ulZ-Ef-x64"/>
+                                        <exclude reference="xC4-2Z-5iV"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="0TV-3Y-uC5"/>
+                                        <include reference="ndY-lo-6OJ"/>
+                                        <include reference="ulZ-Ef-x64"/>
+                                        <exclude reference="xC4-2Z-5iV"/>
                                     </mask>
                                 </variation>
                             </label>
@@ -571,8 +571,8 @@
                                 <exclude reference="8UO-D3-TyI"/>
                                 <exclude reference="kA4-TU-Kbo"/>
                                 <exclude reference="ass-na-jAE"/>
-                                <exclude reference="amd-Gf-xNp"/>
                                 <exclude reference="bqY-uw-PJo"/>
+                                <exclude reference="amd-Gf-xNp"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="M0L-u5-baH"/>
@@ -613,8 +613,8 @@
                                 <include reference="8UO-D3-TyI"/>
                                 <include reference="kA4-TU-Kbo"/>
                                 <include reference="ass-na-jAE"/>
-                                <include reference="amd-Gf-xNp"/>
                                 <include reference="bqY-uw-PJo"/>
+                                <include reference="amd-Gf-xNp"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="M0L-u5-baH"/>
@@ -649,6 +649,15 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="dateMemory" destination="PYB-CF-Hn5" id="GVc-gO-aLA"/>
+                        <outlet property="descriptionMemory" destination="ass-na-jAE" id="bH9-t8-88W"/>
+                        <outlet property="imageMemory" destination="8UO-D3-TyI" id="zXd-Td-tZ6"/>
+                        <outlet property="locationMemory" destination="bqY-uw-PJo" id="1TI-Ch-kF7"/>
+                        <outlet property="temperatureMemory" destination="amd-Gf-xNp" id="t7B-sB-gTH"/>
+                        <outlet property="titleMemory" destination="JI0-yn-GNp" id="abA-Zd-1Eb"/>
+                        <outlet property="weatherMemory" destination="kA4-TU-Kbo" id="SHe-1N-G2m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pnf-kv-tr6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
