@@ -666,10 +666,10 @@
             </objects>
             <point key="canvasLocation" x="3123" y="-315.75"/>
         </scene>
-        <!--CreateNewMemory-->
+        <!--Add New Memory View Controller-->
         <scene sceneID="8ff-Pm-lEG">
             <objects>
-                <viewController storyboardIdentifier="CreateNewMemory" title="CreateNewMemory" id="XPJ-58-BCk" customClass="AddNewMemoryViewController" customModule="ab_initio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XPJ-58-BCk" customClass="AddNewMemoryViewController" customModule="ab_initio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tb8-R2-UsM"/>
                         <viewControllerLayoutGuide type="bottom" id="UUu-pe-fUb"/>
@@ -699,12 +699,11 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="4El-n6-a1y">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4El-n6-a1y">
                                 <rect key="frame" x="34" y="720" width="167" height="26"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2X-mv-xzo">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2X-mv-xzo">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="26"/>
-                                        <color key="backgroundColor" name="selectedControlColor" catalog="System" colorSpace="catalog"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="BeF-bV-iLz"/>
                                             <constraint firstAttribute="width" constant="138" id="JlP-ZY-Aw8"/>
@@ -712,7 +711,7 @@
                                             <constraint firstAttribute="height" constant="40" id="rGA-W8-y9k"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                        <state key="normal" title="Save Memory"/>
+                                        <state key="normal" image="Save-Icon"/>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="BeF-bV-iLz"/>
@@ -733,9 +732,8 @@
                                             <action selector="createNewMemory:" destination="XPJ-58-BCk" eventType="touchUpInside" id="vwq-oh-9sT"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAe-Nu-Fd4">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAe-Nu-Fd4">
                                         <rect key="frame" x="92" y="0.0" width="75" height="26"/>
-                                        <color key="backgroundColor" name="selectedControlColor" catalog="System" colorSpace="catalog"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="138" id="Fu3-2i-MhA"/>
                                             <constraint firstAttribute="height" constant="40" id="QUz-o0-MCz"/>
@@ -743,7 +741,7 @@
                                             <constraint firstAttribute="width" constant="138" id="x4P-JF-n0X"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                        <state key="normal" title="Select Picture"/>
+                                        <state key="normal" image="CameraButtonIcon"/>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="Fu3-2i-MhA"/>
@@ -752,7 +750,8 @@
                                                 <exclude reference="x4P-JF-n0X"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
+                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="143" y="0.0" width="133" height="40"/>
                                             <mask key="constraints">
                                                 <exclude reference="Fu3-2i-MhA"/>
                                                 <include reference="QUz-o0-MCz"/>
@@ -865,7 +864,9 @@
     </scenes>
     <resources>
         <image name="AddButtonIcon" width="40" height="40"/>
+        <image name="CameraButtonIcon" width="40" height="40"/>
         <image name="MenuIcon" width="21" height="13"/>
+        <image name="Save-Icon" width="40" height="40"/>
         <image name="SelectorIcon" width="9" height="25"/>
         <image name="Settings-icon" width="20" height="20"/>
         <image name="Sunshine" width="21" height="21"/>
