@@ -700,10 +700,10 @@
                                 </variation>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4El-n6-a1y">
-                                <rect key="frame" x="34" y="720" width="167" height="26"/>
+                                <rect key="frame" x="34" y="720" width="90" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2X-mv-xzo">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="26"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2X-mv-xzo">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="BeF-bV-iLz"/>
                                             <constraint firstAttribute="width" constant="138" id="JlP-ZY-Aw8"/>
@@ -732,8 +732,8 @@
                                             <action selector="createNewMemory:" destination="XPJ-58-BCk" eventType="touchUpInside" id="vwq-oh-9sT"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAe-Nu-Fd4">
-                                        <rect key="frame" x="92" y="0.0" width="75" height="26"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAe-Nu-Fd4">
+                                        <rect key="frame" x="50" y="0.0" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="138" id="Fu3-2i-MhA"/>
                                             <constraint firstAttribute="height" constant="40" id="QUz-o0-MCz"/>
@@ -750,8 +750,7 @@
                                                 <exclude reference="x4P-JF-n0X"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="143" y="0.0" width="133" height="40"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
                                             <mask key="constraints">
                                                 <exclude reference="Fu3-2i-MhA"/>
                                                 <include reference="QUz-o0-MCz"/>
