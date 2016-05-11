@@ -15,13 +15,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     var memories = [Memory]()
     var fetchedResultsController: NSFetchedResultsController!
-    let imagePicker: UIImagePickerController! = UIImagePickerController()
+    //let imagePicker: UIImagePickerController! = UIImagePickerController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        imagePicker.delegate = self
+        //imagePicker.delegate = self
 
     }
     
@@ -30,20 +30,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         tableView.reloadData()
         
     }
-    
-    func fetchAndSetResults() {
-        let app = UIApplication.sharedApplication().delegate as! AppDelegate
-        let context = app.managedObjectContext // Grabbing the app delegate context.
-        let fetchRequest = NSFetchRequest(entityName: "Memory") // Grapping all entities with name Recipe.
-        
-        do {
-            let results = try context.executeFetchRequest(fetchRequest)
-            self.memories = results as! [Memory]
-        } catch let err as NSError {
-            print(err.debugDescription)
-        }
-    }
-
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCellWithIdentifier("MemoryCell") as? MemoryCell {
@@ -87,12 +73,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.mainMemoryCellText.text = memory.getMemoryTitle()
     }
     
+    func fetchAndSetResults() {
+        let app = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context = app.managedObjectContext // Grabbing the app delegate context.
+        let fetchRequest = NSFetchRequest(entityName: "Memory") // Grapping all entities with name Recipe.
+        
+        do {
+            let results = try context.executeFetchRequest(fetchRequest)
+            self.memories = results as! [Memory]
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showMemory" {
             let indexPath = sender as! NSIndexPath
             let memoryViewController: SingleMemoryViewController = segue.destinationViewController as! SingleMemoryViewController
-            print(memories[indexPath.row])
-            print(indexPath.row)
             memoryViewController.memoryCellData = memories[indexPath.row]
             
         } 

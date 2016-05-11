@@ -75,11 +75,17 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
         imagePicker.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func setupImagePicker() {
+        self.imagePicker = UIImagePickerController()
+        self.imagePicker.delegate = self
     }
     
+    private func showAlert(titleAlert: String, message: String) {
+        let alert = UIAlertController(title: titleAlert, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+
     @IBAction func addImage(sender: AnyObject) {
         let actionSheetController: UIAlertController = UIAlertController(title: "Please select", message: "How you would like to create your new memory?", preferredStyle: .ActionSheet)
         
@@ -89,7 +95,6 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
         
         let takePhotoAction: UIAlertAction = UIAlertAction(title: "Take Photo", style: .Default) {
             action -> Void in
-            print("Take Photo")
             self.setupImagePicker()
             if (UIImagePickerController.isSourceTypeAvailable(.Camera)) {
                 if UIImagePickerController.availableCaptureModesForCameraDevice(.Rear) != nil {
@@ -101,7 +106,6 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
                     TakePhoto().handleAlert("Rear camera doesn't exits", message: "Application canot access the camera")
                 }
             } else {
-                print("From Library")
                 TakePhoto().handleAlert("Camera inaccessable", message: "Application cannot access the camera")
             }
         }
@@ -120,11 +124,6 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
         
         self.presentViewController(actionSheetController, animated: true, completion: nil)
 
-    }
-    
-    func setupImagePicker() {
-        self.imagePicker = UIImagePickerController()
-        self.imagePicker.delegate = self
     }
     
     @IBAction func createNewMemory(sender: AnyObject) {
@@ -156,12 +155,11 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
         }
     }
     
-    private func showAlert(titleAlert: String, message: String) {
-        let alert = UIAlertController(title: titleAlert, message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
-
+    
     /*
     // MARK: - Navigation
 
