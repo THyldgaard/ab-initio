@@ -33,6 +33,13 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
         locationManager.startUpdatingLocation()
         currentLocation = nil
 
+        
+        // Setup Description Text View
+        memoryDescription.layer.cornerRadius = 5
+        // TODO: Figure out how to indend padding for textbox.
+        memoryDescription.contentInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        
+        
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -47,6 +54,7 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        
         print("Location Manager Error: Description ->\(error.localizedDescription) : Reason -> \(error.localizedFailureReason)")
     }
     
@@ -55,8 +63,11 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
         let location = CLLocation(latitude: lat, longitude: lon)
         geoCoder.reverseGeocodeLocation(location) {
             (placemarks, error) -> Void in
-            let placeMark: CLPlacemark! = (placemarks?[0])!
+            
+            guard let placemarks = placemarks,
+                let placeMark: CLPlacemark = placemarks[0] else { return }
             self.determineCityLocation(placeMark)
+            
         }
     }
     
@@ -130,13 +141,17 @@ class AddNewMemoryViewController: UIViewController, UIImagePickerControllerDeleg
         if let title = memoryTitle.text where title != "" {
             let app = UIApplication.sharedApplication().delegate as! AppDelegate
             let context = app.managedObjectContext
-            let entity = NSEntityDescription.entityForName("Memory", inManagedObjectContext: context)!
+            guard let entity = NSEntityDescription.entityForName("Memory", inManagedObjectContext: context) else { return }
             let memory = Memory(entity: entity, insertIntoManagedObjectContext: context)
            
             memory.setMemoryTitle(title)
             memory.setMemoryDescriptionTextField(memoryDescription.text)
-            memory.setMemoryImage(newMemoryImage.image!)
-            memory.setMemoryWeatherImage(UIImage(named: "Sunshine")!) // Change this, so that it reflects the weather!
+            if let image = newMemoryImage.image {
+                memory.setMemoryImage(image)
+            }
+            if let image = UIImage(named: "Sunshine") {
+                memory.setMemoryWeatherImage(image)
+            } // Change this, so that it reflects the weather!
             memory.setMemoryDate(NSDate())
             memory.setMemoryTemperature(22.2) // Change this, so that it reflects the weather!
             memory.setMemoryLatitude(currentLocation.coordinate.latitude)

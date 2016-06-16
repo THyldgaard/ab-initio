@@ -9,33 +9,41 @@
 /* Begin PBXBuildFile section */
 		421327E71CCDFBD200CDB2A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 421327E51CCDFBD200CDB2A1 /* Main.storyboard */; };
 		426E5D831CBE711E00340FFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426E5D821CBE711E00340FFC /* AppDelegate.swift */; };
-		426E5D851CBE711E00340FFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426E5D841CBE711E00340FFC /* ViewController.swift */; };
 		426E5D8B1CBE711E00340FFC /* ab_initio.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 426E5D891CBE711E00340FFC /* ab_initio.xcdatamodeld */; };
 		426E5D8D1CBE711E00340FFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 426E5D8C1CBE711E00340FFC /* Assets.xcassets */; };
 		426E5D901CBE711E00340FFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426E5D8E1CBE711E00340FFC /* LaunchScreen.storyboard */; };
 		426E5D9E1CBE985600340FFC /* MemoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426E5D9D1CBE985600340FFC /* MemoryCell.swift */; };
 		429B945B1CCD4FD200CE6C75 /* TakePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429B945A1CCD4FD200CE6C75 /* TakePhoto.swift */; };
+		42A98F111D132A4400A02302 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A98F0F1D132A4400A02302 /* Settings.storyboard */; };
+		42A98F131D132BA300A02302 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A98F121D132BA300A02302 /* HomeViewController.swift */; };
 		42B786811CBEE0A000726097 /* SingleMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B786801CBEE0A000726097 /* SingleMemoryViewController.swift */; };
 		42B786831CBEEBD300726097 /* AddNewMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B786821CBEEBD300726097 /* AddNewMemoryViewController.swift */; };
+		42E286E41D13266C00E2EE1F /* UIViewController+DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E286E31D13266C00E2EE1F /* UIViewController+DismissKeyboard.swift */; };
 		42E40DCB1CD6BFA7005F636A /* Memory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E40DC91CD6BFA7005F636A /* Memory+CoreDataProperties.swift */; };
 		42E40DCC1CD6BFA7005F636A /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E40DCA1CD6BFA7005F636A /* Memory.swift */; };
+		728A920CEA9D8C61DEA60C40 /* Pods_ab_initio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6382FD8E190C30FFC8856BC1 /* Pods_ab_initio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		421327E61CCDFBD200CDB2A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		426E5D7F1CBE711E00340FFC /* ab-initio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ab-initio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		426E5D821CBE711E00340FFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		426E5D841CBE711E00340FFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		426E5D8A1CBE711E00340FFC /* ab_initio.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ab_initio.xcdatamodel; sourceTree = "<group>"; };
 		426E5D8C1CBE711E00340FFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		426E5D8F1CBE711E00340FFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		426E5D911CBE711E00340FFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		426E5D9D1CBE985600340FFC /* MemoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryCell.swift; sourceTree = "<group>"; };
 		429B945A1CCD4FD200CE6C75 /* TakePhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakePhoto.swift; sourceTree = "<group>"; };
+		42A98F101D132A4400A02302 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
+		42A98F121D132BA300A02302 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		42B786801CBEE0A000726097 /* SingleMemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleMemoryViewController.swift; sourceTree = "<group>"; };
 		42B786821CBEEBD300726097 /* AddNewMemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewMemoryViewController.swift; sourceTree = "<group>"; };
+		42E286E31D13266C00E2EE1F /* UIViewController+DismissKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+DismissKeyboard.swift"; sourceTree = "<group>"; };
 		42E40DC91CD6BFA7005F636A /* Memory+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Memory+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		42E40DCA1CD6BFA7005F636A /* Memory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
+		6382FD8E190C30FFC8856BC1 /* Pods_ab_initio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ab_initio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAFB6FB182038EEFEC411845 /* Pods-ab-initio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ab-initio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ab-initio/Pods-ab-initio.debug.xcconfig"; sourceTree = "<group>"; };
+		FDEB43DA1075BCC7622F2DD7 /* Pods-ab-initio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ab-initio.release.xcconfig"; path = "Pods/Target Support Files/Pods-ab-initio/Pods-ab-initio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +51,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				728A920CEA9D8C61DEA60C40 /* Pods_ab_initio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10BDA831F192FFE7C79D180C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CAFB6FB182038EEFEC411845 /* Pods-ab-initio.debug.xcconfig */,
+				FDEB43DA1075BCC7622F2DD7 /* Pods-ab-initio.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4229F9F01D1331BF00E0A5E0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		426E5D761CBE711E00340FFC = {
 			isa = PBXGroup;
 			children = (
 				426E5D811CBE711E00340FFC /* ab-initio */,
 				426E5D801CBE711E00340FFC /* Products */,
+				10BDA831F192FFE7C79D180C /* Pods */,
+				4A8DB15D398B308CEE4F2609 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +95,8 @@
 		426E5D811CBE711E00340FFC /* ab-initio */ = {
 			isa = PBXGroup;
 			children = (
+				4229F9F01D1331BF00E0A5E0 /* Storyboards */,
+				42E286E21D13263900E2EE1F /* Extensions */,
 				426E5D9A1CBE752A00340FFC /* Utilities */,
 				426E5D991CBE752500340FFC /* Controllers */,
 				426E5D981CBE751F00340FFC /* Views */,
@@ -95,6 +124,7 @@
 				426E5D9D1CBE985600340FFC /* MemoryCell.swift */,
 				426E5D8E1CBE711E00340FFC /* LaunchScreen.storyboard */,
 				421327E51CCDFBD200CDB2A1 /* Main.storyboard */,
+				42A98F0F1D132A4400A02302 /* Settings.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -102,9 +132,9 @@
 		426E5D991CBE752500340FFC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				426E5D841CBE711E00340FFC /* ViewController.swift */,
 				42B786801CBEE0A000726097 /* SingleMemoryViewController.swift */,
 				42B786821CBEEBD300726097 /* AddNewMemoryViewController.swift */,
+				42A98F121D132BA300A02302 /* HomeViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -125,6 +155,22 @@
 			name = Photo;
 			sourceTree = "<group>";
 		};
+		42E286E21D13263900E2EE1F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				42E286E31D13266C00E2EE1F /* UIViewController+DismissKeyboard.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		4A8DB15D398B308CEE4F2609 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6382FD8E190C30FFC8856BC1 /* Pods_ab_initio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 426E5D941CBE711E00340FFC /* Build configuration list for PBXNativeTarget "ab-initio" */;
 			buildPhases = (
+				12497791F7AC77EF2D5C5EE8 /* [CP] Check Pods Manifest.lock */,
 				426E5D7B1CBE711E00340FFC /* Sources */,
 				426E5D7C1CBE711E00340FFC /* Frameworks */,
 				426E5D7D1CBE711E00340FFC /* Resources */,
+				9E2DA6F7C5DADC2AD38A147F /* [CP] Embed Pods Frameworks */,
+				D2BEE46F614516EAD6759865 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -187,21 +236,71 @@
 				421327E71CCDFBD200CDB2A1 /* Main.storyboard in Resources */,
 				426E5D901CBE711E00340FFC /* LaunchScreen.storyboard in Resources */,
 				426E5D8D1CBE711E00340FFC /* Assets.xcassets in Resources */,
+				42A98F111D132A4400A02302 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12497791F7AC77EF2D5C5EE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9E2DA6F7C5DADC2AD38A147F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ab-initio/Pods-ab-initio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2BEE46F614516EAD6759865 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ab-initio/Pods-ab-initio-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		426E5D7B1CBE711E00340FFC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42E286E41D13266C00E2EE1F /* UIViewController+DismissKeyboard.swift in Sources */,
 				42E40DCC1CD6BFA7005F636A /* Memory.swift in Sources */,
 				42B786831CBEEBD300726097 /* AddNewMemoryViewController.swift in Sources */,
 				426E5D9E1CBE985600340FFC /* MemoryCell.swift in Sources */,
-				426E5D851CBE711E00340FFC /* ViewController.swift in Sources */,
 				429B945B1CCD4FD200CE6C75 /* TakePhoto.swift in Sources */,
+				42A98F131D132BA300A02302 /* HomeViewController.swift in Sources */,
 				42B786811CBEE0A000726097 /* SingleMemoryViewController.swift in Sources */,
 				426E5D8B1CBE711E00340FFC /* ab_initio.xcdatamodeld in Sources */,
 				42E40DCB1CD6BFA7005F636A /* Memory+CoreDataProperties.swift in Sources */,
@@ -226,6 +325,14 @@
 				426E5D8F1CBE711E00340FFC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		42A98F0F1D132A4400A02302 /* Settings.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42A98F101D132A4400A02302 /* Base */,
+			);
+			name = Settings.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -316,23 +423,27 @@
 		};
 		426E5D951CBE711E00340FFC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAFB6FB182038EEFEC411845 /* Pods-ab-initio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ab-initio/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tonni.hyldgaard.ab-initio";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		426E5D961CBE711E00340FFC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDEB43DA1075BCC7622F2DD7 /* Pods-ab-initio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ab-initio/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tonni.hyldgaard.ab-initio";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -10,7 +10,7 @@ import UIKit
 
 class SingleMemoryViewController: UIViewController {
     
-    var memoryCellData: Memory!
+    var memoryCellData: Memory?
     
     @IBOutlet weak var imageMemory: UIImageView!
     @IBOutlet weak var locationMemory: UILabel!
@@ -33,13 +33,14 @@ class SingleMemoryViewController: UIViewController {
     }
     
     private func configureView() {
-        self.titleMemory.text = memoryCellData!.getMemoryTitle()
-        self.imageMemory.image = memoryCellData!.getMemoryImage()
-        self.locationMemory.text = "location: \(memoryCellData!.getMemoryLatitude()), \(memoryCellData!.getMemoryLongitude())"
-        self.dateMemory.text = "Date: \(memoryCellData!.getMemoryDate())"
-        self.descriptionMemory.text = memoryCellData!.getMemoryDescriptionTextField()
-        self.weatherMemory.image = memoryCellData!.getMemoryWeatherImage()
-        self.temperatureMemory.text = "\(memoryCellData!.getMemoryTemperature())˚C"
+        guard let cellData = memoryCellData else { return }
+        self.titleMemory.text = cellData.getMemoryTitle()
+        self.imageMemory.image = cellData.getMemoryImage()
+        self.locationMemory.text = "location: \(cellData.getMemoryLatitude()), \(cellData.getMemoryLongitude())"
+        self.dateMemory.text = "Date: \(cellData.getMemoryDate())"
+        self.descriptionMemory.text = cellData.getMemoryDescriptionTextField()
+        self.weatherMemory.image = cellData.getMemoryWeatherImage()
+        self.temperatureMemory.text = "\(cellData.getMemoryTemperature())˚C"
     }
     
 

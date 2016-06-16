@@ -12,16 +12,5 @@ class MemoryCell: UITableViewCell {
 
     @IBOutlet weak var mainMemoryImg: UIImageView!
     @IBOutlet weak var mainMemoryCellText: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
 
 }
